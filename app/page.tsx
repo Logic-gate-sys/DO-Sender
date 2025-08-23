@@ -1,10 +1,12 @@
-import Image from "next/image";
-import Header from "./components/Header";
-import AirdropForm
-  from "./components/AirDropForm";
+import {Header} from "./components/Header";
+import AirdropForm from "./components/AirDropForm";
+
+
+
+
 export default function Home() {
   return (
-    <div>
+    <div className="">
       <Header />
       <AirdropForm/>
    </div>

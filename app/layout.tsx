@@ -1,26 +1,33 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { Providers } from "@/providers";
+import  {Providers}  from '@/providers';
 
 
+
+
+
+
+//SEO - metadata 
 export const metadata: Metadata = {
-  title: "TS-Sender",
-  description: "A simple ERC20 Token Airdrop app",
+  title: "DO-Sender",
+  description: "A simple ERC20 Token Airdrop nextjs static app"
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+//typed props
+type rootProps = {
+  children:React.ReactNode
+}
+const  RootLayout = ({children}: rootProps)=>{
   return (
     <html lang="en">
-      <body>
+      <body >
         <Providers>
-        {children}
+            {children}
         </Providers>
       </body>
     </html>
   );
 }
+
+export default RootLayout;
+
