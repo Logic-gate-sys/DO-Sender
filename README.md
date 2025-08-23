@@ -79,9 +79,9 @@ Open a Pull Request
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## Acknowledgments
-RainbowKit team for wallet integration
-Wagmi for React hooks
-Next.js team for the framework
-Cyfrin Updraft: for the development knowlege
+- RainbowKit team for wallet integration
+- Wagmi for React hooks
+- Next.js team for the framework
+- Cyfrin Updraft: for the development knowlege
 Similar code found with 2 license types - View matches
 
