@@ -1,8 +1,6 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
-# dependencies
-/node_modules
-/.pnp
+# Dependencies
+node_modules/
+.pnpm-store/
 .pnp.*
 .yarn/*
 !.yarn/patches
@@ -10,45 +8,54 @@
 !.yarn/releases
 !.yarn/versions
 
-# testing
-/coverage
+# Testing
+coverage/
+test-results/
+playwright-report/
+blob-report/
+playwright/.cache/
+.cache-synpress/
 
-# next.js
-/.next/
-/out/
+# Next.js
+.next/
+out/
+build/
+dist/
 
-# production
-/build
+# Environment
+.env
+.env.*
+!.env.example
 
-# misc
-.DS_Store
-*.pem
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
 
-#vscode
-.vscode
-
-# debug
+# Debug logs
 npm-debug.log*
 yarn-debug.log*
-yarn-error.log*
+pnpm-debug.log*
 .pnpm-debug.log*
 
-# env files (can opt-in for committing if needed)
-.env*
+# System files
+.DS_Store
+Thumbs.db
 
-# vercel
-.vercel
-
-# typescript
+# TypeScript
 *.tsbuildinfo
 next-env.d.ts
 
-# Playwright
-node_modules/
-/test-results/
-/playwright-report/
-/blob-report/
-/playwright/.cache/
+# Vercel
+.vercel
 
-# .gitignore entry
-.cache-synpress/
+# Optional: Hardhat (if using)
+cache/
+artifacts/
+
+# Optional: Coverage directory
+coverage.json
+
+# Optional: Gas reporter
+gasReporterOutput.json
