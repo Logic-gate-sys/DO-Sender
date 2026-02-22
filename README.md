@@ -1,87 +1,115 @@
-# TS-Sender Web3 Application
-A decentralized application (dApp) built with Next.js and TypeScript for performing ERC20 token airdrops efficiently.
 
-## Features
-Connect Web3 wallet via RainbowKit
-Perform batch ERC20 token transfers (airdrops)
-Support for multiple EVM chains (Sepolia, zkSync, Anvil)
-Responsive UI with Tailwind CSS
-Comprehensive test coverage with Playwright and Synpress
-🛠 Tech Stack
-Frontend: Next.js, TypeScript, React
-Web3: Wagmi, RainbowKit, Viem
-Styling: Tailwind CSS
-Testing: Vitest, Playwright, Synpress
-Development: Node.js, pnpm
+```markdown
+# TS-Sender 🚀 | Web3 Token Distribution dApp
 
-## Clone the repository
-git clone <repository-url>
+A high-performance decentralised application (dApp) built with **Next.js** and **TypeScript**, designed for efficient ERC20 token batch transfers. This project prioritizes security, gas efficiency, and industrial-grade testing.
 
-## Install dependencies
+## 🌟 Key Features
+- **Seamless Connectivity:** Integrated **RainbowKit** for a premium wallet connection experience.
+- **Batch Transfers:** Optimized logic for performing ERC20 airdrops across multiple addresses.
+- **Multi-Chain Ready:** Native support for **Sepolia**, **zkSync**, and local **Anvil** environments.
+- **E2E Testing:** Robust test coverage using **Synpress** and **Playwright** to simulate real-world wallet interactions and transaction signing.
+- **Modern UI:** Responsive, accessible interface built with **Tailwind CSS**.
+
+## 🛠 Tech Stack
+- **Frontend:** Next.js (App Router), TypeScript, React
+- **Web3 Layer:** Wagmi, Viem, RainbowKit
+- **Testing:** Vitest, Playwright, Synpress (E2E Wallet Testing)
+- **Tooling:** pnpm, Node.js
+
+---
+
+## 🚀 Getting Started
+
+### 1. Installation
+```bash
+git clone [https://github.com/Logic-gate-sys/ts-sender-webapp.git](https://github.com/Logic-gate-sys/ts-sender-webapp.git)
+cd ts-sender-webapp
 pnpm install
 
-## Create .env.local file
+```
+
+### 2. Configuration
+
+Create a `.env.local` file in the root directory:
+
+```bash
 cp .env.example .env.local
 
-NEXT_PUBLIC_PROJECT_ID=your_wallet_connect_project_id🔧 Configuration
-Set up your environment variables in .env.local:
+```
 
-Configure supported chains in RainbowKitConfig.ts# Run development server
+Update the following:
+
+* `NEXT_PUBLIC_PROJECT_ID`: Your WalletConnect Project ID.
+
+### 3. Development
+
+```bash
 pnpm dev
 
-Usage
-## Build for production
-pnpm build
+```
 
-## Run production server
-pnpm start
+---
 
-Testing
-## Run unit tests
+## 🧪 Testing Strategy
+
+This project implements a comprehensive testing lifecycle to ensure smart contract interaction safety.
+
+* **Unit Testing:** Validates utility functions and component logic.
+```bash
 pnpm test
 
-## Run E2E tests
-pnpm test:e2e
+```
 
-## Run E2E tests with UI
-pnpm test:e2e:ui
 
-Project Structure
+* **End-to-End (E2E):** Uses **Synpress** to test real Metamask/Wallet flows in a headless browser.
+```bash
+pnpm test:e2e        # Run standard E2E
+pnpm test:e2e:ui     # Run E2E with UI debug mode
+
+```
+
+
+
+---
+
+## 📁 Project Structure
+
+```text
 ts-sender-webapp/
-├── app/                  # Next.js app directory
-│   ├── components/      # React components
-│   ├── util/           # Utility functions
-│   └── layout.tsx      # Root layout
-├── test/               # Test files
-│   ├── playWright/     # E2E tests
-│   └── unit-test/      # Unit tests
-├── providers.tsx       # Web3 providers setup
-└── RainbowKitConfig.ts # RainbowKit configuration
+├── app/                 # Next.js App Router & Views
+│   ├── components/      # UI Components (Tailwind)
+│   ├── util/            # Web3 & Helper Utilities
+├── test/                # QA Suite
+│   ├── playWright/      # Synpress Wallet E2E tests
+│   └── unit-test/       # Vitest logic tests
+├── providers.tsx        # Web3 & Wagmi Context
+└── RainbowKitConfig.ts  # Chain & Provider configuration
 
+```
 
-## Smart Contract Integration
-The application integrates with ERC20 tokens using standard interfaces and a custom airdrop contract. Key functionality includes:
+---
 
-Token balance checking
-Batch transfer execution
-Transaction status monitoring
-## Security
-Client-side validation
-Network security checks
-Gas estimation before transactions
-## Contributing
-Fork the repository
-Create your feature branch (git checkout -b feature/amazing-feature)
-Commit your changes (git commit -m 'Add some amazing feature')
-Push to the branch (git push origin feature/amazing-feature)
-Open a Pull Request
-## License
-This project is licensed under the MIT License - see the LICENSE file for details.
+## 🛡 Security & Reliability
 
-## Acknowledgments
-- RainbowKit team for wallet integration
-- Wagmi for React hooks
-- Next.js team for the framework
-- Cyfrin Updraft: for the development knowlege
-Similar code found with 2 license types - View matches
+* **Client-Side Validation:** Rigorous address and balance checks before transaction broadcast.
+* **Network Awareness:** Automatic chain switching and gas estimation.
+* **Transaction Monitoring:** Real-time feedback for "Pending," "Success," and "Reverted" states.
 
+## 🤝 Contributing
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📜 License
+
+Distributed under the MIT License.
+
+## 🙌 Acknowledgments
+
+* **Cyfrin Updraft:** For foundational Web3 architectural insights.
+* **Wagmi/Viem Team:** For best-in-class React hooks and utilities.
+```
